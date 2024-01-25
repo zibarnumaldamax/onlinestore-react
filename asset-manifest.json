@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/onlinestore-react/static/css/main.1496141f.css",
+    "main.js": "/onlinestore-react/static/js/main.ba3dc367.js",
+    "static/media/garden store.png": "/onlinestore-react/static/media/garden store.343a653d7952cc2cb7e0.png",
+    "static/media/404-Page.png": "/onlinestore-react/static/media/404-Page.4ce59f95ecce2421f03b.png",
+    "static/media/garden order.jpg": "/onlinestore-react/static/media/garden order.17861cb629ffee6e6616.jpg",
+    "static/media/logo.svg": "/onlinestore-react/static/media/logo.2c4de109184f6eaf6c36f0a3efa67b74.svg",
+    "static/media/basket_icon.svg": "/onlinestore-react/static/media/basket_icon.4a6b02ccfdb5d50ae3d3795369df12cf.svg",
+    "index.html": "/onlinestore-react/index.html",
+    "static/media/cross.svg": "/onlinestore-react/static/media/cross.c92006857f0a57d29c3e9352d0ac3b32.svg",
+    "main.1496141f.css.map": "/onlinestore-react/static/css/main.1496141f.css.map",
+    "main.ba3dc367.js.map": "/onlinestore-react/static/js/main.ba3dc367.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.1496141f.css",
+    "static/js/main.ba3dc367.js"
+  ]
+}
