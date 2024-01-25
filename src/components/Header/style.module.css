@@ -1,0 +1,149 @@
+
+.header {
+  max-width: 1380px;
+  margin: 0 auto;
+  padding: 20px 0;
+  display: grid;
+  grid-template-columns: 80px auto 100px;
+  gap: 20px;
+  align-items: center;
+  justify-items: center;
+  border-bottom: 1px solid #DDDDDD;
+}
+
+.nav {
+  display: flex;
+  gap: 50px;
+  justify-self: center;
+  padding: 0 50px;
+}
+.nav_link {
+  font-weight: 500;
+  font-size: 18px;
+  color: #000000;
+  padding: 20px 0;
+  transition: all 0.3s ease 0s;
+}
+
+.nav_link:hover,
+.nav_link:focus {
+  color: #339933;
+}
+
+.active {
+  color: #339933;
+}
+
+.basket_icon {
+  fill: #000000;
+  cursor: pointer;
+}
+
+.basket_icon:hover,
+.basket_icon:focus {
+  fill: #339933;
+}
+
+.burger {
+  display: none;
+  height: 40px;
+  width: 40px;
+  margin-right: 10px;
+  position: relative;
+}
+.burger span,
+.burger span::before,
+.burger span::after {
+  width: 100%;
+  height: 4px;
+  position: absolute;
+  cursor: pointer;
+  background: #339933;
+  transition: 0.3s;
+  border-radius: 10px;
+  display: block;
+}
+.burger span::before {
+  content: "";
+  top: -12px;
+}
+.burger span {
+  top: 20px;
+}
+.burger span::after {
+  content: "";
+  bottom: -12px;
+}
+
+.burger span.active::before {
+  content: "";
+  top: 0;
+  transform: rotate(45deg);
+}
+.burger span.active::after {
+  content: "";
+  bottom: 0;
+  transform: rotate(-45deg);
+}
+.burger span.active {
+  background: transparent;
+  cursor: pointer;
+}
+
+@media (max-width: 960px) {
+  .header {
+    gap: 20px;
+  }
+  .logo {
+    margin-left: 10px;
+  }
+  .nav {
+    gap: 20px;
+    padding: 0;
+  }
+}
+
+@media (max-width: 720px) {
+  .container {
+    width: 100%;
+    position: fixed;
+    background: white;
+    z-index: 50;
+    border-bottom: 1px solid rgb(220, 220, 220);
+  }
+  .header {
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+  }
+  .catalog_btn {
+    display: none;
+  }
+  .nav_link {
+    font-size: 20px;
+  }
+  .nav {
+    display: none;
+  }
+  .burger {
+    display: block;
+  }
+  .logo {
+    width: 50px;
+  }
+  .nav_link {
+    font-size: 20px;
+  }
+}
+@media (max-width: 420px) {
+  .nav_link {
+    font-size: 18px;
+  }
+}

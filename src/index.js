@@ -1,17 +1,79 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import App from './components/App';
+import { RouterProvider, createBrowserRouter } from 'react-router-dom';
+import { Provider } from 'react-redux';
+import { store } from './store';
+import ErrorPage from './pages/NotFoundPage';
+import MainPage from './pages/MainPage';
+import CategoriesPage from './pages/CategoriesPage';
+import ProductsPage from './pages/ProductsPage';
+import BasketPage from './pages/BasketPage';
+import SingleProductPage from './pages/SingleProductPage';
+import NotFoundPage from './pages/NotFoundPage';
+
+const router = createBrowserRouter(
+  [
+    {
+      path: '/',
+      element: <App />,
+      errorElement: <ErrorPage />,
+      children: [
+        {
+          path: '/',
+          element: <MainPage />,
+        },
+
+        {
+          path: '/products',
+          element: <ProductsPage />,
+        },
+
+        {
+          path: '/products/:id',
+          element: <SingleProductPage />,
+        },
+
+        {
+          path: '/sales/:AllSales',
+          element: <ProductsPage />,
+        },
+
+        {
+          path: '/basket',
+          element: <BasketPage />,
+        },
+
+        {
+          path: '/categories',
+          element: <CategoriesPage />,
+        },
+
+        {
+          path: '/categories/:categoryTitle/:categoryID',
+          element: <ProductsPage />,
+        },
+
+        {
+          path: '/*',
+          element: <NotFoundPage />,
+        },
+      ],
+    },
+  ],
+
+  {
+    basename: '/',
+  }
+);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
-    <App />
+    <Provider store={store}>
+      <RouterProvider router={router}>
+        <App />
+      </RouterProvider>
+    </Provider>
   </React.StrictMode>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();

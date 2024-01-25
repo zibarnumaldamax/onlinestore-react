@@ -1,0 +1,121 @@
+.basket_form {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 45px;
+  width: 100%;
+  height: 600px;
+  background-color: #F1F3F4;
+  border-radius: 21px;
+  padding: 25px;
+}
+.title {
+  font-weight: 600;
+  font-size: 28px;
+}
+.total_blok {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.total_text {
+  font-weight: 500;
+  font-size: 24px;
+}
+.total_sum {
+  font-weight: 600;
+  font-size: 32px;
+}
+.inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.phone_number {
+  padding: 25px;
+  background: #ffffff;
+  border: 1px solid #DDDDDD;
+  border-radius: 20px;
+  font-weight: 500;
+  font-size: 24px;
+  outline: none;
+}
+.phone_number::placeholder {
+  font-weight: 300;
+  font-size: 24px;
+  color: #929292;
+  letter-spacing: 2px;
+}
+.reject {
+  border: 2px solid rgba(250, 73, 108, 0.558);
+  box-shadow: rgba(151, 65, 65, 0.45) 0px 5px 15px;
+}
+.order_btn,
+.btn_shop {
+  background: #339933;
+  border-radius: 17px;
+  font-weight: 700;
+  font-size: 28px;
+  color: #ffffff;
+  padding: 20px 0;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  transition: background, color;
+  transition-duration: 0.5s;
+}
+.order_btn:hover,
+.btn_shop:hover {
+  color: #339933;
+  background: rgba(224, 223, 223, 0.81);
+  border: 1px solid #080808;
+  box-shadow: rgba(99, 99, 99, 0.45) 0px 5px 15px;
+}
+.btn_shop {
+  width: 70%;
+  height: min-content;
+  align-self: center;
+  text-align: center;
+  box-shadow: rgba(19, 19, 19, 0.45) 0px 5px 15px;
+}
+@media (max-width: 960px) {
+  .basket_form {
+    max-width: 500px;
+    margin-top: 0;
+  }
+  .btn_shop {
+    width: 50%;
+  }
+}
+@media (max-width: 500px) {
+  .basket_form {
+    gap: 25px;
+    height: 300px;
+  }
+  .inputs {
+    gap: 10px;
+    align-items: center;
+  }
+  .phone_number,
+  .order_btn {
+    padding: 15px;
+    font-size: 18px;
+    width: 90%;
+  }
+  .phone_number::placeholder {
+    font-size: 18px;
+  }
+  .btn_shop,
+  .order_btn {
+    font-size: 20px;
+  }
+  .title {
+    font-size: 25px;
+  }
+  .total_text {
+    font-size: 20px;
+  }
+  .total_sum {
+    font-size: 28px;
+  }
+}

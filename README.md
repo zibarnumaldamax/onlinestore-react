@@ -1,3 +1,8 @@
+# RUN A LOCAL BACKEND FROM backend FOULDER AT http://localhost:3333 FOR THIS APP TO WORK
+# READ README IN backend FOULDER FOR MORE INFO
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

@@ -1,0 +1,122 @@
+.product_item {
+  padding-bottom: 10px;
+  border-radius: 15px;
+  display: grid;
+  grid-template-rows: auto repeat(2, 1fr);
+  gap: 20px;
+  color: rgb(0, 0, 0);
+  padding: 30px;
+  margin-bottom: 10px;
+}
+.picture {
+  display: flex;
+  align-items: center;
+}
+.product_item img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+.prices_blok {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px;
+}
+.disc_price,
+.no_disc_price {
+  font-weight: 600;
+  font-size: 30px;
+}
+.no_disc_price {
+  padding: 0 10px;
+}
+.price {
+  font-weight: 500;
+  font-size: 20px;
+  text-decoration-line: line-through;
+  color: #8b8b8b;
+}
+.percent {
+  font-weight: 600;
+  font-size: 20px;
+  color: #ff32a1;
+}
+.product_name {
+  font-weight: 500;
+  font-size: 16px;
+  padding-left: 10px;
+}
+.small_text {
+  font-size: 22px;
+}
+
+.picture {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+.add_btn {
+  width: 100%;
+  background: #f1fff1;
+  border: 2px solid #339933;
+  border-radius: 21px;
+  padding: 25px;
+  font-weight: 600;
+  font-size: 18px;
+  color: #339933;
+  cursor: pointer;
+  position: absolute;
+  bottom: 5%;
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.7s opacity, 0.7s visibility;
+}
+.product_item:hover .add_btn {
+  opacity: 1;
+  visibility: visible;
+}
+.mob_btn {
+  display: none;
+}
+@media (max-width: 690px) {
+  .product_item img {
+    height: 250px;
+  }
+}
+@media (max-width: 550px) {
+  .disc_price,
+  .no_disc_price {
+    font-size: 25px;
+  }
+  .price,
+  .percent {
+    font-size: 16px;
+  }
+}
+@media (max-width: 490px) {
+  .product_item {
+    padding: 20px;
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+      rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+  }
+  .product_item img {
+    width: 95%;
+    height: 250px;
+    border-radius: 5px;
+  }
+  .add_btn {
+    display: none;
+  }
+  .mob_btn {
+    display: block;
+    width: 50%;
+    background: transparent;
+    border: 1px solid black;
+    border-radius: 15px;
+    padding: 10px;
+    cursor: pointer;
+    margin: 0 auto;
+  }
+}

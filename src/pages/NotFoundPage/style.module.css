@@ -1,0 +1,50 @@
+.page {
+  max-width: 1440px;
+  margin: 30px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 25px;
+}
+.img {
+  width: 70%;
+}
+.text {
+  font-size: 20px;
+  font-weight: 500;
+  color: rgb(149, 150, 151);
+}
+.home_btn {
+  width: 200px;
+  border-radius: 17px;
+  font-weight: 600;
+  font-size: 20px;
+  text-align: center;
+  color: rgb(72, 72, 72);
+  padding: 15px;
+  border: 2px solid #339933;
+  outline: none;
+  cursor: pointer;
+  transition: background, color;
+  transition-duration: 0.5s;
+}
+.home_btn:hover {
+  background-color: #339933;
+  color: white;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px;
+}
+
+@media (max-width: 700px) {
+  .img {
+    width: 80%;
+  }
+  .text {
+    font-size: 16px;
+    text-align: center;
+  }
+  .home_btn {
+    width: 150px;
+    font-size: 18px;
+  }
+}
