@@ -30,6 +30,17 @@ const OrderForm = () => {
     });
   }
 
+  const countRender = () => {
+    if (products.status === 'resolve') {
+      return data
+        .reduce((prev, item) => {
+          return prev + item.count;
+        }, 0);
+    } else {
+      return "No";
+    }
+  };
+
   const priceRender = () => {
     if (products.status === 'resolve') {
       return data
@@ -59,8 +70,14 @@ const OrderForm = () => {
         <form onSubmit={handleSubmit(onSubmit)} className={s.basket_form}>
           <h3 className={s.title}>Order details</h3>
           <div className={s.total_blok}>
+            <div className={s.total_count_subblock}>
+              <p className={s.total_text}>{countRender()}</p>
+              <p className={s.total_text}>Items</p>  
+            </div>
+            <div className={s.total_price_subblock}>  
             <p className={s.total_text}>Total</p>
             <p className={s.total_sum}>{priceRender()}$</p>
+            </div>
           </div>
           <div className={s.inputs}>
             <input

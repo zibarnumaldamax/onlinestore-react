@@ -2,30 +2,50 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 45px;
+  gap: 25px;
   width: 100%;
-  height: 600px;
+  height: 620px;
   background-color: #F1F3F4;
   border-radius: 21px;
   padding: 25px;
 }
 .title {
-  font-weight: 600;
-  font-size: 28px;
+  font-weight: 700;
+  font-size: 38px;
 }
+
 .total_blok {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+  color: #8B8B8B;
+}
+
+.total_count_subblock{
+  width: 30%;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+
+.total_price_subblock{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .total_text {
   font-weight: 500;
-  font-size: 24px;
+  font-size: 30px;
 }
 .total_sum {
-  font-weight: 600;
-  font-size: 32px;
+  font-weight: 700;
+  font-size: 45px;
+  color: black;
 }
+
 .inputs {
   display: flex;
   flex-direction: column;
